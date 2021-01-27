@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 742146b8a5dd2f6ed42dc74605411eaba773a151
 import './App.css';
 import Navbar from "./component/Navbar";
 import React from "react";
@@ -63,3 +71,4 @@ export default App
 
 
 
+>>>>>>> 773a9715b01f54b680990f4c6a4881e979400962
