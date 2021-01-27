@@ -13,8 +13,7 @@ constructor(props){
   };
 }
 componentDidMount() {
-    axios.get(`http://localhost:8081/showincharge/${this.props.match.params.theatrename}`)
-    //(`http://localhost:8081/showincharge/`)
+    axios.get(`http://localhost:8080/showincharge/${this.props.match.params.theatrename}`)
     .then((result) => {
       console.log(result);
        this.setState({

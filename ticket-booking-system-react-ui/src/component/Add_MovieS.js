@@ -19,7 +19,7 @@ class AddMovieS extends Component {
 };
   componentDidMount() {
     axios
-      .get(`http://localhost:8081/showincharge/theatres`)
+      .get(`http://localhost:8080/showincharge/theatres`)
      // (`http://localhost:8081/showincharge/${this.props.match.params.theatrename}`)
       .then((data) => {
         let theats = data.data.map((theatre) => {
@@ -54,7 +54,7 @@ class AddMovieS extends Component {
       }
     };
       await axios
-      .post(`http://localhost:8081/showincharge/${this.props.match.params.theatrename}/insert`, movie)
+      .post(`http://localhost:8080/showincharge/${this.props.match.params.theatrename}/insert`, movie)
       .then((data)=>{alert("Movie is added.");},
       (error) => {
         alert("Movie is not inserted.");

@@ -1,10 +1,9 @@
-
 import React, { Component } from "react";
 import axios from "axios";
 import PropTypes from 'prop-types'
 class UpdateMovieS extends Component {
   state = {
-    movieid: "",
+    movieid: 0,
     movieimage: "",
     moviename: "",
     movieFname: "",
@@ -21,7 +20,7 @@ class UpdateMovieS extends Component {
   };
   componentDidMount() {
     axios
-      .get(`http://localhost:8081/showincharge/${this.props.match.params.theatrename}/${this.props.match.params.movieid}`
+      .get(`http://localhost:8080/showincharge/${this.props.match.params.theatrename}/${this.props.match.params.movieid}`
       )
       .then((result) => {
         // alert("Dept Id: " + result.data.department);
@@ -37,11 +36,11 @@ class UpdateMovieS extends Component {
             movietype: result.data.movietype,
             movielanguage: result.data.movielanguage,
             trailerlink: result.data.trailerlink,
-          theatreid: result.data.theatreid,
+          theatreid: result.data.theatres.theatreid,
         });
       });
       axios
-      .get(`http://localhost:8081/showincharge/theatres`)
+      .get(`http://localhost:8080/showincharge/theatres`)
      // (`http://localhost:8081/showincharge/${this.props.match.params.theatrename}`)
       .then((data) => {
         let theats = data.data.map((theatre) => {
@@ -60,7 +59,7 @@ class UpdateMovieS extends Component {
   handleSubmit = async (event) => {
     event.preventDefault();
     let movie = {
-        //movieid: this.state.movieid,
+        movieid: this.state.movieid,
         movieimage: this.state.movieimage,
         moviename: this.state.moviename,
         movieFname: this.state.movieFname,
@@ -76,7 +75,7 @@ class UpdateMovieS extends Component {
       },
     };
     console.log(this.props.match.params.movieid);
-    axios.put(`http://localhost:8081/showincharge/${this.props.match.params.theatrename}/update`, movie)
+    axios.put(`http://localhost:8080/showincharge/${this.props.match.params.theatrename}/update/${this.props.match.params.movieid}`, movie)
     // redirect you to Home component after adding user
     .then((data)=>{ alert("Movie is Updated.");},
     (error) => {

@@ -1,16 +1,15 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
 import './App.css';
 import Navbar from "./component/Navbar";
 import React from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./component/ShowInCharge_Home";
 import AddMovieS from "./component/Add_MovieS";
 import ViewMovieS from "./component/View_MovieS";
 import UpdateMovieS from "./component/Update_MovieS";
 import DeleteMovieS from "./component/Delete_MovieS";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 class App extends React.Component {
   state={};
   render(){
@@ -19,9 +18,10 @@ class App extends React.Component {
         <Router>
         <Navbar />
             <Switch>
+
             <Route exact path="/showincharge/:theatrename" component={Home} />
             <Route exact path="/:theatrename/insert" component={AddMovieS }/>
-            {/* <Route exact path="/showincharge/:theatrename" component={ViewMovieS} /> */}
+            <Route exact path="/showincharge" component={ViewMovieS} />
             <Route exact path="/:theatrename/update/:movieid" component={UpdateMovieS} />
             <Route exact path="/:theatrename/delete/:movieid" component={DeleteMovieS} />
             </Switch>
@@ -32,46 +32,33 @@ class App extends React.Component {
     );
   }
 }
-=======
-<<<<<<< HEAD
-=======
-import { Router, Switch, Route, Link } from "react-router-dom";
->>>>>>> e9e955ccf1f628af8d6f358012940c12072e9ca4
+export default App
 
->>>>>>> b1c9d48d5474e337375e0972fb82c70844754307
-import './App.css';
-import './UI.css';
-import React from "react";
-import UI from './UI';
+//import { Router, Switch, Route, Link } from "react-router-dom";
+// import './App.css';
+// import './UI.css';
+// import React from "react";
+// import Ui1 from './Ui1';
+// import Contactus from './Contactus';
+// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// class App extends React.Component {
+//     state={};
+//     render(){
+//       return (
+//         <div className="container">
+//           <Ui1/>
+//           <Router>        
+//               <Route exact path="/Contactus" component={Contactus} />
+              
+//           </Router>
 
-class App extends React.Component {
-    state={};
-    render(){
-      return (
-        <div className="container">
-          <UI/>
-          
 
-        </div>
-<<<<<<< HEAD
-      );
-    }
-}
-=======
-      </div>
-      </div>
-    {/* Foot Note End */}
-  </footer>
-</>
-
-      </div>
-    );
-  } 
->>>>>>> e9e955ccf1f628af8d6f358012940c12072e9ca4
->>>>>>> c1d0a704cb373184625d40f128fe1ee4ee28d571
->>>>>>> b1c9d48d5474e337375e0972fb82c70844754307
-
-export default App;
+//         </div>
+    
+//       )
+//   } 
+// }
+// export default App
 
 
 

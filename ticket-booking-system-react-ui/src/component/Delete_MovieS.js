@@ -4,7 +4,7 @@ class DeleteMovieS extends Component {
   state = {};
   componentDidMount() {
     axios
-      .delete(`http://localhost:8081/showincharge/${this.props.match.params.theatrename}/delete/${this.props.match.params.movieid}`
+      .delete(`http://localhost:8080/showincharge/${this.props.match.params.theatrename}/delete/${this.props.match.params.movieid}`
       )
       .then(
         (result) => {
