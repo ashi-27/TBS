@@ -1,59 +1,4 @@
-<<<<<<< HEAD
 import './App.css';
-import Navbar from "./component/Navbar";
-import React from "react";
-import "../node_modules/bootstrap/dist/css/bootstrap.css";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "./component/ShowInCharge_Home";
-import AddMovieS from "./component/Add_MovieS";
-import ViewMovieS from "./component/View_MovieS";
-import UpdateMovieS from "./component/Update_MovieS";
-import DeleteMovieS from "./component/Delete_MovieS";
-class App extends React.Component {
-  state={};
-  render(){
-    return (
-      <div className="container">
-        <Router>
-        <Navbar />
-            <Switch>
-            <Route exact path="/showincharge/:theatrename" component={Home} />
-            <Route exact path="/:theatrename/insert" component={AddMovieS }/>
-            {/* <Route exact path="/showincharge/:theatrename" component={ViewMovieS} /> */}
-            <Route exact path="/:theatrename/update/:movieid" component={UpdateMovieS} />
-            <Route exact path="/:theatrename/delete/:movieid" component={DeleteMovieS} />
-            </Switch>
-        </Router>
-        
-
-      </div>
-    );
-  }
-}
-=======
-<<<<<<< HEAD
-=======
-import { Router, Switch, Route, Link } from "react-router-dom";
->>>>>>> e9e955ccf1f628af8d6f358012940c12072e9ca4
-
-import './App.css';
-import ExportExcel from './components/ExportExcel';
-import React, { Component } from "react";
-
-<<<<<<< HEAD
-class App extends Component {
-  state = {};
-  render() {
-    return (
-      <div className="container">
-       
-       <ExportExcel/>
-        </div>
-    );
-  }
-}
-=======
-import Contactus from './Contactus.js';
 
 import './assets/css/aos/aos.css';
 import './assets/css/bootstrap/bootstrap-grid.css';
@@ -88,7 +33,7 @@ import post5 from './assets/images/post5.jpg';
 import post6 from './assets/images/post6.jpg';
 import rcntpost3 from './assets/images/rcntpost3.png';
 
-function App() {
+function Contactus() {
     return (
       <div className="App">
        <>
@@ -128,7 +73,7 @@ function App() {
             <li className="nav-item"><a className="nav-link" href="#">Admin</a></li>
             <li className="nav-item"><a className="nav-link" href="#">Show in charge</a></li>
             <li className="nav-item"><a className="nav-link" href="#">About us</a></li>
-            <li className="nav-item"><Link to={"/Contactus"} className="nav-link">Contact Us</Link></li>
+            <li className="nav-item"><a className="nav-link" href="#">Contact Us</a></li>
           </ul>
           <form className="bg-white search-form" method="get" id="searchform">
             <div className="input-group">
@@ -150,9 +95,9 @@ function App() {
         <div className="col-12 offset-md-1 col-md-11">
         <div className="swiper-slide slide-content d-flex align-items-center">
                 <div className="single-slide">
-                  <h1><p>Ticket<br /> Booking System</p>
+                  <h1><p>Contact Us:<br /> @+91 9987654321</p>
                   </h1>
-                  <h2>Let's Sit Back &amp; Book Movies</h2>
+                  <h2><p>For any Queries:<br />Email:sam@gmail.com</p></h2>
                 </div>
               </div>
               </div>
@@ -162,133 +107,6 @@ function App() {
      
     <div className="texture" />
     <div className="diag-bg" />
-  </section>
-  {/* Hero End */}
-  {/* Call To Action Start */}
-  <br />
-  <section className="cta">
-    <div className="container">
-        <h2>FOR LIMITING THE QUEUES AT COUNTERS</h2>
-          <h3>Enjoy Your Time at Our Website !</h3>
-        </div>
-        </section>
-
-  <section className="recent-posts">
-    <div className="container">
-      <div className="title text-center">
-        <h5 className="title-primary">Now Showing</h5>
-        <h1 className="title-blue">Housefull Movies</h1>
-      </div>
-      <br />
-  
-  
-      <h1>Hera Pheri</h1>
-      <div className="image">
-       <img src={post1} height="300px" width="300px"/>
-        <br />
-      <time dateTime="2019-04-06T13:53">26th January, 2021</time> 
-      </div>
-
-            <div className="post-content">
-            <h3><a href="#">Three unemployed men find the answer to all their money problems when they recieve a call from a kidnapper. However, things do not go as planned.</a></h3>
-              </div>
-              <div className="post">
-              <p>Genre:Comedy</p>
-              <a href="#" class="btn btn-info" role="button">Book Now</a>
-            </div>
-
-            <br />
-            <br />
-
-            <h1>Mission Mangal</h1>
-            <div className="image">
-       <img src={post2} height="300px" width="300px"/>
-        <br />
-      <time dateTime="2019-04-06T13:53">26th January, 2021</time> 
-      </div>
-
-            <div className="post-content">
-            <h3><a href="#">A group of scientists at ISRO battle in their personal and professional lives and work tirelessly towards their only motive, the Mars Orbiter Mission.</a></h3>
-              </div>
-              <div className="post">
-              <p>Genre:Drama, Sci-Fi</p>
-              <a href="#" class="btn btn-info" role="button">Book Now</a>
-            </div>
-
-            <br />
-            <br />
-
-            <h1>Total Dhamaal</h1>
-            <div className="image">
-       <img src={post3} height="300px" width="300px"/>
-        <br />
-      <time dateTime="2019-04-06T13:53">26th January, 2021</time> 
-      </div>
-
-            <div className="post-content">
-            <h3><a href="#">A group of people learn about a hidden treasure and then they race to find it and claim it.</a></h3>
-              </div>
-              <div className="post">
-              <p color="black">Genre:Comedy</p>
-              <a href="#" class="btn btn-info" role="button">Book Now</a>
-            </div>
-
-            <br />
-            <br />
-
-            <h1>Naam Shabana</h1>
-            <div className="image">
-       <img src={post4} height="300px" width="300px"/>
-        <br />
-      <time dateTime="2019-04-06T13:53">26th January, 2021</time> 
-      </div>
-
-            <div className="post-content">
-            <h3><a href="#">This Spin-off from Baby (2015) provides the back-story of intelligence agent Shabana, and chronicles how she becomes a spy.</a></h3>
-              </div>
-              <div className="post">
-              <p color="black">Genre:Action,Thriller</p>
-              <a href="#" class="btn btn-info" role="button">Book Now</a>
-            </div>
-
-            <br />
-            <br />
-
-            <h1>Home Alone</h1>
-            <div className="image">
-       <img src={post5} height="300px" width="300px"/>
-        <br />
-      <time dateTime="2019-04-06T13:53">26th January, 2021</time> 
-      </div>
-
-            <div className="post-content">
-            <h3><a href="#">Macaulay Culkin stars in this comedy smash about a boy who is accidently left behind when his family goes to Paris for the holidays.</a></h3>
-              </div>
-              <div className="post">
-              <p color="black">Genre:Comedy</p>
-              <a href="#" class="btn btn-info" role="button">Book Now</a>
-            </div>
-
-            <br />
-            <br />
-
-            <h1>Scavenger Hunt</h1>
-            <div className="image">
-       <img src={post6} height="300px" width="300px"/>
-        <br />
-      <time dateTime="2019-04-06T13:53">26th January, 2021</time> 
-      </div>
-
-            <div className="post-content">
-            <h3><a href="#">To inherit a fortune, various addressees of a will must compete in a wild scavenger hunt to collect selected items, but cannot be simply bought.</a></h3>
-              </div>
-              <div className="post">
-              <p color="black">Genre:Comedy</p>
-              <a href="#" class="btn btn-info" role="button">Book Now</a>
-            </div>
-
-
-          </div>
   </section>
 
   <section className="cta cta2">
@@ -370,16 +188,11 @@ function App() {
       </div>
     {/* Foot Note End */}
   </footer>
-</>
 
-      </div>
+
+  </>
+  </div>
     );
   } 
->>>>>>> e9e955ccf1f628af8d6f358012940c12072e9ca4
->>>>>>> c1d0a704cb373184625d40f128fe1ee4ee28d571
 
-export default App;
-
-
-
-
+export default Contactus;
